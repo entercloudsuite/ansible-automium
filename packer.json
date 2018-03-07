@@ -8,7 +8,7 @@
 		"password": "{{user `ecs_password`}}",
 		"region": "{{user `ecs_region`}}",
 		"image_name": "{{user `image_name`}}",
-		"source_image": "ecs-docker 1.0.0",
+		"source_image": "37d0190f-7620-4d2d-b65f-814133299adb",
 		"ssh_username": "ubuntu",
 		"flavor": "{{user `ecs_flavor`}}",
 		"networks": [ "{{user `ecs_network`}}" ],
