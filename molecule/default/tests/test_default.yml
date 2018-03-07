@@ -1,0 +1,12 @@
+---
+package:
+  python:
+    installed: true
+  python-pip:
+    installed: true
+
+command:
+  cookiecutter --version:
+    exit-status: 0
+  docker-compose --version:
+    exit-status: 0

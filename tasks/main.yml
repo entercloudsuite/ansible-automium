@@ -1,0 +1,23 @@
+---
+# tasks
+
+- name: Install prerequisites
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "python"
+    - "python-pip"
+
+- name: Install cookiecutter
+  pip:
+    name: cookiecutter
+    state: present
+
+- name: "Download and install docker-compose {{docker_compose_version}} binary"
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-Linux-x86_64"
+    dest: /usr/local/bin/docker-compose
+    owner: root
+    group: root
+    mode: 0755
